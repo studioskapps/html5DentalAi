@@ -17,7 +17,7 @@ function init3DModel() {
 
     // 3D ağız modelini yükle
     const loader = new THREE.GLTFLoader();
-    loader.load('path/to/mouthModel.glb', function (gltf) {
+    loader.load('model.glb', function (gltf) {
         mouthModel = gltf.scene;
         scene.add(mouthModel);
         mouthModel.visible = false; // Başlangıçta gizli
