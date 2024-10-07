@@ -1,0 +1,81 @@
+body {
+    display: flex; /* Flexbox kullanarak dikey bölme */
+    margin: 0;
+    height: 100vh; /* Tam ekran */
+}
+
+#container {
+    display: flex; /* Ekranı ikiye bölmek için flexbox */
+    width: 100%;
+    height: 100%;
+}
+
+#videoContainer {
+    flex: 1; /* Sol taraf video için */
+    position: relative;
+    overflow: hidden; /* Taşmayı gizle */
+}
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Video alanını kaplasın */
+}
+
+#playIcon {
+    position: absolute; /* Konumlandırma */
+    top: 50%; /* Dikey ortalama */
+    left: 50%; /* Yatay ortalama */
+    transform: translate(-50%, -50%); /* Merkeze hizalama */
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam arka plan */
+    color: white; /* Beyaz yazı rengi */
+    border-radius: 50%; /* Daire yapmak için */
+    width: 250px; /* Genişlik */
+    height: 250px; /* Yükseklik */
+    display: flex; /* İçeriği ortalamak için */
+    justify-content: center; /* Yatay ortalama */
+    align-items: center; /* Dikey ortalama */
+    font-size: 48pt; /* Simgelerin boyutu */
+    z-index: 1; /* Üstte görünmesi için */
+}
+
+#welcomeMessage {
+    color: white; /* Beyaz renk */
+    background-color: #00FFFF; /* Turkuaz arka plan */
+    font-size: 24pt; /* Yazı boyutu */
+    text-align: center; /* Ortaya hizalama */
+    margin-top: 20px; /* Üstten boşluk */
+    padding: 10px; /* İçeride boşluk */
+}
+
+#formContainer {
+    flex: 1; /* Sağ taraf form için */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Dikey ortalama */
+    align-items: center; /* Yatay ortalama */
+    background-color: white; /* Arka plan rengi beyaz */
+    padding: 20px;
+}
+
+/* Buton Container'ı stilleri */
+#buttonContainer, #questionContainer {
+    display: flex;
+    flex-direction: column; /* Butonları dikey sıralama */
+    gap: 10px; /* Butonlar arası boşluk */
+}
+
+/* Buton stilleri */
+button {
+    background-color: #00FFFF; /* Turkuaz arka plan */
+    color: white; /* Beyaz yazı rengi */
+    padding: 10px; /* Buton içi boşluk */
+    font-size: 24pt; /* Yazı boyutu */
+    border: none; /* Kenarlık yok */
+    cursor: pointer; /* İşaretçi el şeklinde */
+    text-align: center; /* Ortaya hizalama */
+}
+
+button:hover {
+    background-color: #007A7A; /* Hover durumu için daha koyu turkuaz */
+}

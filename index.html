@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İnteraktif Video ve Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS dosyasını bağlama -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> <!-- Three.js kütüphanesini bağlama -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script> <!-- GLTFLoader -->
+</head>
+<body>
+
+    <div id="container" style="position: relative;">
+        <div id="videoContainer">
+            <video id="myVideo" preload="metadata" muted> <!-- Ses kapalı -->
+                <source src="video.mp4" type="video/mp4"> <!-- Video dosyasını buraya ekleyin -->
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <div id="playIcon" style="cursor: pointer;">▶</div> <!-- Play simgesi -->
+        </div>
+
+        <div id="formContainer">
+            <div id="welcomeMessage">Welcome to the jungle</div> <!-- Hoşgeldin mesajı -->
+            <div id="buttonContainer" style="display: none;"> <!-- Başlangıçta gizli -->
+                <button id="button1">Buton 1</button>
+                <button id="button2">Buton 2</button>
+                <button id="button3">Buton 3</button>
+            </div>
+
+            <div id="questionContainer" style="display: none;"> <!-- Soru butonları için gizli -->
+                <button id="question1">Soru 1: Cevap A</button>
+                <button id="question2">Soru 2: Cevap B</button>
+                <button id="question3">Soru 3: Cevap C</button>
+            </div>
+        </div>
+
+        <div id="mouthContainer" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: none;"> <!-- 3D ağız modeli için alan -->
+            <canvas id="mouthCanvas" width="300" height="300"></canvas> <!-- 3D modelin görüneceği alan -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- JavaScript dosyasını bağlama -->
+    <!-- Three.js kütüphanesini ekle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- GLTFLoader'ı ekle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
+
+</body>
+</html>
